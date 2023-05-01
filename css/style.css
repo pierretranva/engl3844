@@ -9,7 +9,10 @@ html {
   }
 
 header, footer {
-  background-color: #00bbff;
+    background: #a8c0ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
   text-align: left;
   /* min-width: 500px; */
 }
@@ -24,7 +27,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(40%, 1fr) ) ;
     grid-gap: 20px;
-    margin-top: 44px;
+    margin: 44px 40px;
   
     justify-items: center;
     justify-content: center;
@@ -60,6 +63,9 @@ object-fit: cover;
     padding: 50px;
     display: block;
 }
+.wrapper > h1 {
+    text-align: center;
+}
 
 .bio {
   color: #ffffff;
@@ -84,7 +90,10 @@ object-fit: cover;
   }
   
   .myButton:hover {
-      background-color:#e69708;
+    background: #a8c0ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
   }
   
   .myButton:active {
@@ -162,11 +171,13 @@ footer div {
 @media all and (max-width:700px) {
     main {
       grid-template-columns: 1fr;
+      margin: 44px auto;
     }
 }
 @media all and (max-width:700px) {
     main {
       grid-template-columns: 1fr;
+      margin: 44px auto;
     }
     .description {
       font-size: 18px;
